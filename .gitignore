@@ -44,3 +44,11 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 android/build/
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
+*.aab
+*.apk
+gradle/
