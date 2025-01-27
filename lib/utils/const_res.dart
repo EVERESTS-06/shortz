@@ -17,7 +17,7 @@ class ConstRes {
 }
 
 const String appName = 'Shortz';
-const companyName = 'YAHWEAH';
+const companyName = 'JIREH';
 const defaultPlaceHolderText = 'S';
 const byDefaultLanguage = 'en';
 
