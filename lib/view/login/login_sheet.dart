@@ -133,13 +133,52 @@ class LoginSheet extends StatelessWidget {
     });
   }
 
-  Future<User?> _signInWithGoogle() async {
+  /*Future<User?> _signInWithGoogle() async {
+  try {
+    // Trigger the Google Sign-In flow
     final GoogleSignInAccount? googleUser = await GoogleSignIn(
-        clientId:
-            '463711886346-3561g7e03arnm5cb1vchc07pjaip8drl.apps.googleusercontent.com',
-        scopes: ['email', 'profile']).signIn();
-    final GoogleSignInAuthentication? googleAuth =
-        await googleUser?.authentication;
+      clientId:
+          '463711886346-3561g7e03arnm5cb1vchc07pjaip8drl.apps.googleusercontent.com',
+      scopes: ['email', 'profile'],
+    ).signIn();
+
+    // If the user cancels the sign-in flow
+    if (googleUser == null) {
+      print('LOG ============ Sign-in was cancelled by the user.');
+      return null;
+    }
+
+    // Obtain the Google Sign-In authentication details
+    final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
+
+    // Check if tokens are null
+    if (googleAuth.accessToken == null || googleAuth.idToken == null) {
+      print('LOG ============ Missing Google Auth tokens.');
+      return null;
+    }
+
+    // Create a credential for Firebase authentication
+    final AuthCredential googleCredential = GoogleAuthProvider.credential(
+      accessToken: googleAuth.accessToken,
+      idToken: googleAuth.idToken,
+    );
+
+    // Sign in to Firebase with the Google credentials
+    final UserCredential userCredential =
+        await FirebaseAuth.instance.signInWithCredential(googleCredential);
+
+    return userCredential.user;
+  } on FirebaseAuthException catch (e) {
+    print('LOG ============ FirebaseAuthException: ${e.message}');
+    return null;
+  } catch (e) {
+    print('LOG ============ Unexpected error: $e');
+    return null;
+  }
+}*/ // invalid token
+Future<User?> _signInWithGoogle() async {
+    final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+    final GoogleSignInAuthentication? googleAuth = await googleUser?.authentication;
     if (googleAuth?.accessToken == null || googleAuth?.idToken == null) {
       return null;
     }
