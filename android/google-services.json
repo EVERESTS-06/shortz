@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "261150636471",
+    "project_id": "shortz-5cc50",
+    "storage_bucket": "shortz-5cc50.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:261150636471:android:d86ff06a9d5fc86fa89032",
+        "android_client_info": {
+          "package_name": "com.myapp.shortz"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCq4bMbxZvk7pJlQWFq_sznF3Uo8Co8-fk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
