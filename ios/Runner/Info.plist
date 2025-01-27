@@ -58,10 +58,10 @@
 	<string>We need access to your camera to capture video for recording and streaming.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>We need access to your microphone to capture audio during video recording.</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>We need access to your photo library to allow you to select photos for your profile picture. and Upload video</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>We need access to your photo library to save your edited photos</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We need access to your photo library to allow you to select photos for your profile picture. and Upload video</string>
 	<key>NSUserTrackingUsageDescription</key>
 	<string>This app uses tracking data to show you personalised ads.</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
